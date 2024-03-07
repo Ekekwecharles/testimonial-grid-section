@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: hsl(210, 46%, 95%);
+  line-height: 1.4;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.grid-4-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  gap: 2.2rem;
+}
+
+.grid-4-col > * {
+  border-radius: 7px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.span-2-col {
+  grid-column: span 2;
+  color: rgb(241, 237, 237);
+}
+
+.span-2-row {
+  grid-row: span 2;
+}
+
+.mod-violet {
+  background-color: rgb(117, 65, 200);
+  background-image: url("images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: 75% 0;
+  background-size: 110px;
+}
+
+.gray-blue {
+  background-color: hsl(217, 19%, 35%);
+  color: rgb(241, 237, 237);
+}
+
+.gray-blue .author-profession {
+  color: rgb(197, 193, 193);
+}
+
+.gray-blue .author-text-body {
+  color: rgb(197, 193, 193);
+}
+
+.dark-blue {
+  background-color: hsl(219, 29%, 14%);
+}
+
+.dark-blue .author-profession {
+  color: rgb(197, 193, 193);
+}
+
+.dark-blue .author-text-body {
+  color: rgb(197, 193, 193);
+}
+
+.white-cl {
+  background-color: white;
+}
+
+.white-cl .author-profession,
+.white-cl .author-text-body {
+  color: rgb(143, 141, 141);
+}
+
+.white-cl .author-name,
+.white-cl .author-text-title {
+  color: rgb(87, 85, 85);
+}
+
+.author-img {
+  border-radius: 50%;
+  border: 2px solid rgb(241, 237, 237);
+  height: 4rem;
+}
+
+.author-img-name-box {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.author-name {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.author-profession {
+  font-size: 1.4rem;
+}
+
+.mod-violet .author-profession {
+  color: rgb(197, 193, 193);
+}
+
+.author-text-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.author-text-body {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.mod-violet .author-text-body {
+  color: rgb(197, 193, 193);
+}
+
+/* Screen size below 400px */
+@media (max-width: 25em) {
+  html {
+    font-size: 50%;
+  }
+
+  .grid-4-col {
+    grid-template-columns: 1fr;
+  }
+
+  .span-2-col {
+    grid-column: span 1;
+  }
+
+  .span-2-row {
+    grid-row: span 1;
+  }
+
+  .container {
+    margin: 5rem auto;
+    max-width: 90%;
+  }
+}
